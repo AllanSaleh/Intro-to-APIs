@@ -1,5 +1,4 @@
 import requests #Imports the request library that we installed, so that we can actually use it
-import json #Import builtin json package
 
 def send_request():
   '''Making a request to the JSONPlaceholder API'''
@@ -18,7 +17,7 @@ def send_request():
   #Step 4: Parse JSON data (make it something useful in Python)
   if response.status_code == 200:
     data = response.json() #Converts JSON into Python dictionary
-    print(data)
+    print(data[1])
 
 
 send_request()
